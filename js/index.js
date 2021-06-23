@@ -56,7 +56,8 @@ window.addEventListener('DOMContentLoaded', () => {
       //   a: 0,
       // },
     ];
-   // Pushed Additional Questions to the quizArray using .push
+  
+    // Pushed Additional Questions to the quizArray using .push
     const quiz4 = {
       q: "How many States are there in Australia?",
       o: ["Four", "Eight", "Six", "Seven"],
@@ -96,11 +97,11 @@ window.addEventListener('DOMContentLoaded', () => {
           //highlight the li if it is the correct answer
           let li = `li_${index}_${i}`;
           let r = `radio_${index}_${i}`;
-          liElement = document.querySelector("#" + li);
-          radioElement = document.querySelector("#" + r);
+           liElement = document.querySelector("#" + li);
+           radioElement = document.querySelector("#" + r);
           if (quizItem.a == i) {
             //change background color of li element here
-            liElement.style.backgroundColor = "lightblue";
+            liElement.style.backgroundColor = "aqua";
           }
           if (radioElement.checked == true && quizItem.a == i) {
             score += 1;
@@ -108,10 +109,10 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       });
       quiz.style.display = "none";
-      const totalScore = document.querySelector("#score");
-      totalScore.innerHTML = `You Scored ${score}/${quizArray.length}`;
-      totalScore.style.color = "green";
-      totalScore.style.fontSize = "large";
+       const totalScore = document.querySelector("#score");
+       totalScore.innerHTML = `You Scored ${score}/${quizArray.length}`;
+       totalScore.style.color = "black";
+       totalScore.style.fontSize = "large";
     }
 
     //reload Page Button (Reloads when clicked!)
@@ -125,24 +126,14 @@ window.addEventListener('DOMContentLoaded', () => {
      // Timer (In Progress)
      var timeLeft = 10;
      var element = document.getElementById("time");
- 
-     
- 
      function countdown() {
-       
-      if (timeLeft == -1) {
+        if (timeLeft == -1) {
          clearTimeout(timerId);
-         element.innerHTML = " Time's up";
-    } else {
-         element.innerHTML = timeLeft;
-         timeLeft--;
+         element.innerHTML = " Time's up"
        }
      }
 
-
-
-
-    displayQuiz();
+ displayQuiz();
   })
 });
 
